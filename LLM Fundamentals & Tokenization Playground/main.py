@@ -2,8 +2,8 @@ from transformers import AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("gpt2")      #Loading GPT - 2 Tokenizer
 
-# For Multiple Sentences
-sentences = ["Hello, how are you?", "I am learning Python.", "GPT-2 is a language model."]
+# For Multiple Sentences in Multiple Languages
+sentences = ["Hello, how are you?", "నమస్కారం, మీరు ఎలా ఉన్నారు?", "नमस्ते, आप कैसे हैं?"]
 
 for text in sentences:
 
