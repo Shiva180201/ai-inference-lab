@@ -15,3 +15,7 @@ print("Internal Representation:", tokens)
 # Tokens IDs to Actual text
 decoded_text = tokenizer.decode(token_ids)
 print("Decoded Text:", decoded_text)
+
+# Comparing number of words with number of tokens
+print("Number of Words:", len(text.split()))
+print("Number of Tokens:", len(token_ids))
