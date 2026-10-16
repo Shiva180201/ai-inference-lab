@@ -2,20 +2,25 @@ from transformers import AutoTokenizer
 
 tokenizer = AutoTokenizer.from_pretrained("gpt2")      #Loading GPT - 2 Tokenizer
 
-text = "Hello, how are you?"
+# For Multiple Sentences
+sentences = ["Hello, how are you?", "I am learning Python.", "GPT-2 is a language model."]
 
-# Convert text into Token IDs
-token_ids = tokenizer.encode(text)
-print("Token IDs:", token_ids)
+for text in sentences:
 
-# Internal representation of Token Ids to text for understanding
-tokens = tokenizer.convert_ids_to_tokens(token_ids)
-print("Internal Representation:", tokens)
+    print("Original Text:", text)
+    
+    # Convert text into Token IDs
+    token_ids = tokenizer.encode(text)
+    print("Token IDs:", token_ids)
 
-# Tokens IDs to Actual text
-decoded_text = tokenizer.decode(token_ids)
-print("Decoded Text:", decoded_text)
+    # Internal representation of Token Ids to text for understanding
+    tokens = tokenizer.convert_ids_to_tokens(token_ids)
+    print("Internal Representation:", tokens)
 
-# Comparing number of words with number of tokens
-print("Number of Words:", len(text.split()))
-print("Number of Tokens:", len(token_ids))
+    # Tokens IDs to Actual text
+    decoded_text = tokenizer.decode(token_ids)
+    print("Decoded Text:", decoded_text)
+
+    # Comparing number of words with number of tokens
+    print("Number of Words:", len(text.split()))
+    print("Number of Tokens:", len(token_ids))
