@@ -8,7 +8,7 @@ sentences = ["Hello, how are you?", "I am learning Python.", "GPT-2 is a languag
 for text in sentences:
 
     print("Original Text:", text)
-    
+
     # Convert text into Token IDs
     token_ids = tokenizer.encode(text)
     print("Token IDs:", token_ids)
@@ -24,3 +24,5 @@ for text in sentences:
     # Comparing number of words with number of tokens
     print("Number of Words:", len(text.split()))
     print("Number of Tokens:", len(token_ids))
+
+    print("-" * 100)
