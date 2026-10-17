@@ -1,7 +1,5 @@
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-import torch
-
 tokenizer = AutoTokenizer.from_pretrained("gpt2")      #Loading GPT - 2 Tokenizer
 
 model = AutoModelForCausalLM.from_pretrained("gpt2")   #Loading GPT - 2 Model
