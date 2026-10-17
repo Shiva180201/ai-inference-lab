@@ -1,6 +1,10 @@
-from transformers import AutoTokenizer
+from transformers import AutoTokenizer, AutoModelForCausalLM
 
 tokenizer = AutoTokenizer.from_pretrained("gpt2")      #Loading GPT - 2 Tokenizer
+
+model = AutoModelForCausalLM.from_pretrained("gpt2")   #Loading GPT - 2 Model
+
+print(model)
 
 # For Multiple Sentences in Multiple Languages
 sentences = ["Hello, how are you?", "నమస్కారం, మీరు ఎలా ఉన్నారు?", "नमस्ते, आप कैसे हैं?"]
